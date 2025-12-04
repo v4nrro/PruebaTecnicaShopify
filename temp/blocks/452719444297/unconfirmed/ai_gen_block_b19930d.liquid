@@ -1,6 +1,253 @@
+{% doc %}
+  @prompt
+    Create a close button (X icon) for the announcement bar that allows customers to dismiss it. The button should be positioned on the right side of the announcement bar and when clicked, it should hide the announcement bar. The dismissed state should be remembered so the announcement bar stays hidden even if the customer refreshes the page.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-announcement-bar-{{ ai_gen_id }} {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: {{ block.settings.padding_vertical }}px {{ block.settings.padding_horizontal }}px;
+    background-color: {{ block.settings.background_color }};
+    color: {{ block.settings.text_color }};
+    text-align: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .ai-announcement-bar-{{ ai_gen_id }}.ai-announcement-bar-hidden-{{ ai_gen_id }} {
+    display: none;
+  }
+
+  .ai-announcement-bar-content-{{ ai_gen_id }} {
+    flex: 1;
+    font-size: {{ block.settings.font_size }}px;
+    padding-right: 40px;
+  }
+
+  .ai-announcement-bar-content-{{ ai_gen_id }} a {
+    color: {{ block.settings.link_color }};
+    text-decoration: underline;
+  }
+
+  .ai-announcement-bar-content-{{ ai_gen_id }} a:hover {
+    color: {{ block.settings.link_hover_color }};
+  }
+
+  .ai-announcement-bar-close-{{ ai_gen_id }} {
+    position: absolute;
+    right: {{ block.settings.padding_horizontal }}px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: {{ block.settings.close_button_color }};
+    transition: color 0.2s ease, opacity 0.2s ease;
+    opacity: 0.8;
+  }
+
+  .ai-announcement-bar-close-{{ ai_gen_id }}:hover {
+    opacity: 1;
+    color: {{ block.settings.close_button_hover_color }};
+  }
+
+  .ai-announcement-bar-close-{{ ai_gen_id }} svg {
+    width: {{ block.settings.close_button_size }}px;
+    height: {{ block.settings.close_button_size }}px;
+    stroke-width: 2;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-announcement-bar-content-{{ ai_gen_id }} {
+      font-size: {{ block.settings.font_size | times: 0.9 }}px;
+      padding-right: 32px;
+    }
+
+    .ai-announcement-bar-close-{{ ai_gen_id }} svg {
+      width: {{ block.settings.close_button_size | times: 0.85 }}px;
+      height: {{ block.settings.close_button_size | times: 0.85 }}px;
+    }
+  }
+{% endstyle %}
+
+<dismissible-announcement-{{ ai_gen_id }}
+  class="ai-announcement-bar-{{ ai_gen_id }}"
+  data-block-id="{{ block.id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-announcement-bar-content-{{ ai_gen_id }}">
+    {{ block.settings.announcement_text }}
+  </div>
+  <button
+    class="ai-announcement-bar-close-{{ ai_gen_id }}"
+    aria-label="Close announcement"
+    type="button"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </button>
+</dismissible-announcement-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class DismissibleAnnouncement{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.blockId = this.dataset.blockId;
+        this.storageKey = 'announcement_dismissed_' + this.blockId;
+      }
+
+      connectedCallback() {
+        this.checkDismissedState();
+        this.setupEventListeners();
+      }
+
+      checkDismissedState() {
+        const isDismissed = localStorage.getItem(this.storageKey);
+        if (isDismissed === 'true') {
+          this.classList.add('ai-announcement-bar-hidden-{{ ai_gen_id }}');
+        }
+      }
+
+      setupEventListeners() {
+        const closeButton = this.querySelector('.ai-announcement-bar-close-{{ ai_gen_id }}');
+        if (closeButton) {
+          closeButton.addEventListener('click', () => {
+            this.dismissAnnouncement();
+          });
+        }
+      }
+
+      dismissAnnouncement() {
+        this.classList.add('ai-announcement-bar-hidden-{{ ai_gen_id }}');
+        localStorage.setItem(this.storageKey, 'true');
+      }
+    }
+
+    customElements.define('dismissible-announcement-{{ ai_gen_id }}', DismissibleAnnouncement{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Announcement bar",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "richtext",
+      "id": "announcement_text",
+      "label": "Announcement text",
+      "default": "<p>Welcome to our store! Free shipping on orders over $50.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "link_hover_color",
+      "label": "Link hover",
+      "default": "#cccccc"
+    },
+    {
+      "type": "color",
+      "id": "close_button_color",
+      "label": "Close button",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "close_button_hover_color",
+      "label": "Close button hover",
+      "default": "#cccccc"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "close_button_size",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Close button size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "min": 4,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement bar"
+    }
+  ]
+}
 {% endschema %}
