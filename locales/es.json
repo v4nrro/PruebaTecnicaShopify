@@ -313,5 +313,13 @@
       "success_moderated": "Comentario publicado y a la espera de moderación",
       "success": "Comentario publicado"
     }
+  },
+  "shopify": {
+    "checkout": {
+      "shipping": {
+        "third_party_payment_timeout": "No se pueden cargar los métodos de pago. Inténtalo de nuevo o usa otro método de pago.",
+        "third_party_payment_error": "Se produjo un error al cargar la selección de pago. Utilice otro método de pago."
+      }
+    }
   }
 }
