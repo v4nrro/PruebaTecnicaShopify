@@ -16,7 +16,7 @@
       "custom_css": [],
       "name": "t:names.divider_section",
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-cc5a01f5-53de-430a-ba65-2c9f46f6188a",
         "section_width": "full-width",
         "thickness": 1,
         "corner_radius": "square",
@@ -63,7 +63,7 @@
             "link": "",
             "open_in_new_tab": false,
             "placeholder": "",
-            "padding-block-start": 80,
+            "padding-block-start": 0,
             "padding-block-end": 10,
             "padding-inline-start": 51,
             "padding-inline-end": 51
