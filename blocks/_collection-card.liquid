@@ -5,15 +5,15 @@
 {% style %}
 .white-square-overlay {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 100px;
-    height: 100px
-    margin: 0 auto;
+    top: 10px;      /* adjust */
+    left: 10px;     /* adjust */
+    width: 60px;    /* size of square */
+    height: 60px;
     background: white;
-    z-index: 10;
+    z-index: 10;    /* ensure it sits above image */
   }
 
+  /* Ensure parent card allows absolute positioning */
   .collection-card {
     position: relative;
   }
