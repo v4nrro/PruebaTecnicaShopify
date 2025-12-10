@@ -89,6 +89,14 @@ export class AnnouncementBar extends Component {
     this.play();
   }
 
+  /**
+   * Close the announcement bar.
+   */
+  close() {
+    this.suspend();
+    this.style.display = 'none';
+  }
+
   get autoplay() {
     return Boolean(this.autoplayInterval);
   }

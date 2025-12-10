@@ -14,12 +14,8 @@
   style="{% render 'spacing-padding', settings: section.settings %}; --border-bottom-width: {{ section.settings.divider_width }}px;"
 >
   {% liquid
-    assign autoplay = false
+    assign autoplay = true
     assign show_arrows = false
-    if section.blocks.size > 1
-      assign autoplay = true
-      assign show_arrows = true
-    endif
   %}
 
   <announcement-bar-component
@@ -35,6 +31,8 @@
     <div class="announcement-bar__slides">
       {% content_for 'blocks' %}
     </div>
+
+    <button class="announcement-bar__close" aria-label="Close announcement">&times;</button>
   </announcement-bar-component>
 </aside>
 
