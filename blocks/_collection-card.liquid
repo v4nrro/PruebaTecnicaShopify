@@ -3,6 +3,21 @@
 {% assign collection = closest.collection %}
 
 {% style %}
+.white-square-overlay {
+    position: absolute;
+    top: 10px;      /* adjust */
+    left: 10px;     /* adjust */
+    width: 60px;    /* size of square */
+    height: 60px;
+    background: white;
+    z-index: 10;    /* ensure it sits above image */
+    border-radius: 4px;
+  }
+
+  /* Ensure parent card allows absolute positioning */
+  .collection-card {
+    position: relative;
+  }
   {% if request.visual_preview_mode %}
     .collection-card {
       min-width: 250px;
@@ -21,6 +36,8 @@
 {% capture children %}
   {% content_for 'blocks', closest.collection: collection %}
 {% endcapture %}
+
+<div class="white-square-overlay"></div>
 
 {% render 'collection-card',
   card_image: card_image,
