@@ -140,7 +140,7 @@
       },
       "name": "t:names.product_recommendations",
       "settings": {
-        "product": "bufanda-unisa",
+        "product": "bolso-mediano-con-cadena",
         "recommendation_type": "related",
         "layout_type": "grid",
         "carousel_on_mobile": false,
