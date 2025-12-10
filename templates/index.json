@@ -719,6 +719,14 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "button_custom_aYwWQh": {
+      "type": "button-custom",
+      "name": "Button Reveal Message",
+      "settings": {
+        "button_text": "Click me",
+        "reveal_message": "Thanks! Your message has appeared."
+      }
     }
   },
   "order": [
@@ -728,6 +736,7 @@
     "section_BxtUE9",
     "collection_list_XkPfCm",
     "section_9jH7aL",
-    "section_AXpXz9"
+    "section_AXpXz9",
+    "button_custom_aYwWQh"
   ]
 }
