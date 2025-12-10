@@ -117,7 +117,7 @@
                 "open_in_new_tab": false,
                 "padding-block-start": 6,
                 "padding-block-end": 0,
-                "padding-inline-start": 4,
+                "padding-inline-start": 15,
                 "padding-inline-end": 4
               },
               "blocks": {
@@ -243,6 +243,9 @@
           "block_order": []
         }
       },
+      "custom_css": [
+        ".section-background{background-color: #1E1D1C;}"
+      ],
       "name": "t:names.collections_carousel",
       "settings": {
         "collection_list": [],
