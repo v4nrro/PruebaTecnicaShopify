@@ -660,6 +660,15 @@
         "padding-block-start": 30,
         "padding-block-end": 0
       }
+    },
+    "whatsapp_cAwUwK": {
+      "type": "whatsapp",
+      "name": "WSP - Whatsapp Button",
+      "settings": {
+        "show_whatsapp": true,
+        "whatsapp_number": "",
+        "whatsapp_msg": ""
+      }
     }
   },
   "order": [
@@ -668,6 +677,7 @@
     "collection_list_gEmf6H",
     "section_BxtUE9",
     "section_nrNhzQ",
-    "section_9jH7aL"
+    "section_9jH7aL",
+    "whatsapp_cAwUwK"
   ]
 }

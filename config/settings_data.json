@@ -79,6 +79,16 @@
     "variant_button_border_width": 1,
     "variant_button_radius": 14,
     "variant_button_width": "equal-width-buttons",
+    "sections": {
+      "whatsapp": {
+        "type": "whatsapp",
+        "settings": {
+          "show_whatsapp": true,
+          "whatsapp_number": "655044058",
+          "whatsapp_msg": "Testing Unisa prueba técnica"
+        }
+      }
+    },
     "content_for_index": [],
     "blocks": {
       "1232542678405107163": {
