@@ -314,7 +314,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Link</p>",
+                            "text": "<p>Contáctanos</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -340,7 +340,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Link</p>",
+                            "text": "<p>Preguntas Frecuentes</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -366,7 +366,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Link</p>",
+                            "text": "<p>Territorios y tarifas</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -392,7 +392,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Link</p>",
+                            "text": "<p>Devoluciones</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -418,7 +418,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Link</p>",
+                            "text": "<p>Condiciones de compra</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -444,7 +444,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Link</p>",
+                            "text": "<p>Aviso legal</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -520,7 +520,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Link</p>",
+                            "text": "<p>Configurar cookies</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -546,7 +546,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Link</p>",
+                            "text": "<p>Resolución de conflictos</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -572,7 +572,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Link</p>",
+                            "text": "<p>B2B</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -598,7 +598,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Link</p>",
+                            "text": "<p>Sitemap</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -624,7 +624,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Link</p>",
+                            "text": "<p>Canal de Denuncias</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -650,7 +650,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Link</p>",
+                            "text": "<p>Personalizador</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -927,7 +927,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Link</p>",
+                        "text": "<p>Facebook</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -953,7 +953,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Link</p>",
+                        "text": "<p>Pinterest</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -979,7 +979,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Link</p>",
+                        "text": "<p>Instagram</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1005,7 +1005,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Link</p>",
+                        "text": "<p>TikTok</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1031,33 +1031,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Link</p>",
-                        "width": "fit-content",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "custom",
-                        "font": "var(--font-body--family)",
-                        "font_size": "0.875rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    },
-                    "text_PKDyiy": {
-                      "type": "text",
-                      "name": "t:names.text",
-                      "settings": {
-                        "text": "<p>Link</p>",
+                        "text": "<p>Spotify</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1085,8 +1059,7 @@
                     "text_LzXGwD",
                     "text_HkB3Te",
                     "text_XTPjBV",
-                    "text_LLymKr",
-                    "text_PKDyiy"
+                    "text_LLymKr"
                   ]
                 }
               },
