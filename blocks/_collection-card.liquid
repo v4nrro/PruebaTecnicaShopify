@@ -3,16 +3,6 @@
 {% assign collection = closest.collection %}
 
 {% style %}
-.white-square-overlay {
-    position: absolute;
-    padding: 25px;
-    top: 26%;
-    width: 47%;
-    height: 50%;
-    background: white;
-    z-index: 10;
-  }
-
   {% if request.visual_preview_mode %}
     .collection-card {
       min-width: 250px;
@@ -31,10 +21,6 @@
 {% capture children %}
   {% content_for 'blocks', closest.collection: collection %}
 {% endcapture %}
-
-<div class="white-square-overlay">
-  <p>Test</p>
-</div>
 
 {% render 'collection-card',
   card_image: card_image,
