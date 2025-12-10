@@ -18,7 +18,7 @@
           "type": "_announcement",
           "name": "t:names.announcement",
           "settings": {
-            "text": "<strong>Envío estándar gratuito a partir de 69,90€ </strong>",
+            "text": "<strong>Envío estándar gratuito a partir de 69,90€ </strong><a href=\"#\" title=\"#\"><strong>+info </strong></a>",
             "link": "",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
@@ -31,7 +31,7 @@
         "announcement_BxgCk9": {
           "type": "_announcement",
           "settings": {
-            "text": "⛄️<strong>Ampliamos plazo de devolución hasta el 15/01</strong>⛄️",
+            "text": "⛄️<strong>Ampliamos plazo de devolución hasta el 15/01</strong>⛄️ <a href=\"#\" title=\"#\">+info</a>",
             "link": "",
             "font": "var(--font-subheading--family)",
             "font_size": "1rem",
@@ -46,7 +46,9 @@
         "announcement_BKGm3J",
         "announcement_BxgCk9"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".section-background {background-color: black;}"
+      ],
       "name": "t:names.announcement_bar",
       "settings": {
         "speed": 5,
