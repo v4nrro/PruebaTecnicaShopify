@@ -557,6 +557,14 @@
             "padding-inline-end": 0
           },
           "blocks": {
+            "custom_liquid_W8tU4a": {
+              "type": "custom-liquid",
+              "name": "Custom Button",
+              "settings": {
+                "custom_liquid": ""
+              },
+              "blocks": {}
+            },
             "text_Aipzr6": {
               "type": "text",
               "settings": {
@@ -624,6 +632,7 @@
             }
           },
           "block_order": [
+            "custom_liquid_W8tU4a",
             "text_Aipzr6",
             "text_KwaPWE",
             "button_jrcMjd"
