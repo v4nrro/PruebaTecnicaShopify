@@ -46,6 +46,7 @@
         "announcement_BKGm3J",
         "announcement_BxgCk9"
       ],
+      "disabled": true,
       "custom_css": [
         ".section-background {background-color: black;}"
       ],
