@@ -404,7 +404,7 @@
       "block_order": [
         "group_gkmXPa"
       ],
-      "name": "t:names.custom_section",
+      "name": "MyUnisas",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -458,7 +458,7 @@
       "block_order": [
         "instafeed_app_block_niYTyy"
       ],
-      "name": "t:names.custom_section",
+      "name": "InstagramFeed",
       "settings": {
         "content_direction": "row",
         "vertical_on_mobile": true,
@@ -632,7 +632,7 @@
         "group_FbTC6c",
         "text_LN3bFL"
       ],
-      "name": "t:names.custom_section",
+      "name": "Newsletter",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
