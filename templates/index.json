@@ -669,6 +669,14 @@
         "whatsapp_number": "",
         "whatsapp_msg": ""
       }
+    },
+    "button_newsletter_Kc77GL": {
+      "type": "button-newsletter",
+      "name": "Newsletter Widget",
+      "settings": {
+        "label": "Suscríbete",
+        "style_class": "btn-newsletter"
+      }
     }
   },
   "order": [
@@ -678,6 +686,7 @@
     "section_BxtUE9",
     "section_nrNhzQ",
     "section_9jH7aL",
-    "whatsapp_cAwUwK"
+    "whatsapp_cAwUwK",
+    "button_newsletter_Kc77GL"
   ]
 }
