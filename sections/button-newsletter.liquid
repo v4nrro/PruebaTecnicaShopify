@@ -1,0 +1,98 @@
+{% schema %}
+{
+  "name": "Newsletter Widget",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Button label",
+      "default": "Suscríbete"
+    },
+    {
+      "type": "text",
+      "id": "style_class",
+      "label": "Style class",
+      "default": "btn-newsletter"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Newsletter Widget"
+    }
+  ]
+}
+{% endschema %}
+
+{% assign block_settings = section.settings %}
+
+<div class="newsletter-widget">
+
+  <button
+    type="button"
+    class="size-style {{ block_settings.style_class }} newsletter-trigger"
+    style="{% render 'size-style', settings: block_settings %}"
+  >
+    {{ block_settings.label }}
+  </button>
+
+  <div class="newsletter-form-container" style="display:none; margin-top: 1.5rem;">
+
+    <form id="form_newsletter" name="form_newsletter" action="" novalidate class="show-form">
+
+      <div class="caja-input-news bloque-input error">
+        <input type="email"
+          class="input-news error"
+          name="email"
+          id="email_newsletter"
+          placeholder="Escribe tu e-mail aquí"
+          autocomplete="off">
+        <label for="email_newsletter" class="error">El e-mail es obligatorio.</label>
+
+        <input type="submit"
+          name="suscribe_newsletter"
+          class="button-news"
+          value="Enviar">
+      </div>
+
+      <div class="legal-info">
+        UNISA se hace responsable del tratamiento de tus datos, con la finalidad de atender tu solicitud...
+        Puedes ejercitar tus derechos en
+        <a href="mailto:protecciondatos@unisa-europa.com">protecciondatos@unisa-europa.com</a>.
+        +info en nuestra
+        <a href="https://www.unisa-europa.com/es-ES/privacidad/" target="_blank">
+          Política de privacidad
+        </a>
+      </div>
+
+      <div class="bloque-input caja-checkbox">
+        <input class="css-checkbox" type="checkbox" name="news_newsletter" id="news_newsletter">
+        <label for="news_newsletter" class="css-label">Acepto recibir ofertas y novedades por e-mail</label>
+      </div>
+
+      <div class="result-news"></div>
+
+    </form>
+
+  </div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const wrapper = document.currentScript.closest(".newsletter-widget");
+  const button = wrapper.querySelector(".newsletter-trigger");
+  const formContainer = wrapper.querySelector(".newsletter-form-container");
+
+  button.addEventListener("click", () => {
+    formContainer.style.display = "block";
+    button.style.display = "none";
+  });
+});
+</script>
+
+<style>
+  .newsletter-trigger {
+    cursor: pointer;
+  }
+</style>
