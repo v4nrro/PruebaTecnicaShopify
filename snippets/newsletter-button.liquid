@@ -1,0 +1,33 @@
+{%- doc -%}
+  Intended for use in a block similar to the button block.
+
+  @param {object} [block] - The block
+
+  {% render 'button' %}
+{%- enddoc -%}
+
+{% assign block_settings = block.settings %}
+
+<button
+  class="
+    size-style
+    {{ block_settings.style_class }}
+    {{ block_settings.style_class }}--{{ block.id }}
+  "
+  style="{% render 'size-style', settings: block_settings %}"
+  {{ block.shopify_attributes }}
+>
+  {{ block_settings.label }}
+</button>
+
+{% stylesheet %}
+  .link {
+    text-decoration: none;
+    text-decoration-color: currentcolor;
+
+    &:hover {
+      color: var(--color-primary-hover);
+      text-decoration-color: transparent;
+    }
+  }
+{% endstylesheet %}

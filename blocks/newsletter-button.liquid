@@ -1,4 +1,4 @@
-{% render 'button', link: %}
+{% render 'newsletter-button' %}
 
 {% liquid
   assign pressed = false
@@ -51,11 +51,6 @@
       "default": "t:text_defaults.button_label"
     },
     {
-      "type": "url",
-      "id": "link",
-      "label": "t:settings.link"
-    },
-    {
       "type": "checkbox",
       "id": "open_in_new_tab",
       "label": "t:settings.open_new_tab",
@@ -74,10 +69,6 @@
           "value": "button-secondary",
           "label": "t:options.secondary"
         },
-        {
-          "value": "link",
-          "label": "t:options.link"
-        }
       ],
       "default": "button"
     },
@@ -142,11 +133,8 @@
   ],
   "presets": [
     {
-      "name": "t:names.button",
+      "name": "Newsletter Button",
       "category": "t:categories.basic",
-      "settings": {
-        "link": "shopify://collections/all"
-      }
     }
   ]
 }
