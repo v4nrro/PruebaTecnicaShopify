@@ -4,18 +4,22 @@
   assign pressed = true
 %}
 
-{% if pressed %}
-  <form id="form_newsletter" name="form_newsletter" action="" novalidate="novalidate" class="show-form">
-    <div class="caja-input-news bloque-input error">
+<div class="newsletter-wrapper">
+  {% unless pressed %}
+    <span onclick="showFormNews(this)" class="button-standard half-width soft">SUSCRÍBETE</span>
+  {% endunless %}
+
+  <form id="form_newsletter" name="form_newsletter" action="" novalidate="novalidate" class="{% if pressed %}show-form{% else %}hide-form{% endif %}">
+    <div class="caja-input-news bloque-input">
       <input
         type="email"
-        class="input-news error"
+        class="input-news"
         name="email"
         id="email_newsletter"
         placeholder="Escribe tu e-mail aquí"
         autocomplete="off"
       >
-      <label for="email_newsletter" class="error">El e-mail es obligatorio.</label>
+      <label for="email_newsletter" class="error" style="display: none;">El e-mail es obligatorio.</label>
       <input type="submit" name="suscribe_newsletter" class="button-news" value="Enviar">
     </div>
 
@@ -34,10 +38,29 @@
     </div>
 
     <div class="result-news"></div>
-
-    <span onclick="showFormNews(this)" class="button-standard half-width soft" style="display: none;">SUSCRÍBETE</span>
   </form>
-{% endif %}
+</div>
+
+<script>
+function showFormNews(button) {
+  const wrapper = button.closest('.newsletter-wrapper');
+  const form = wrapper.querySelector('#form_newsletter');
+  
+  // Hide button and show form
+  button.style.display = 'none';
+  form.classList.remove('hide-form');
+  form.classList.add('show-form');
+}
+</script>
+
+{% stylesheet %}
+  .hide-form {
+  display: none;
+}
+.show-form {
+  display: block;
+}
+{% endstylesheet %}
 
 {% schema %}
 {
