@@ -48,6 +48,20 @@
     "product_recommendations_VDNVfE": {
       "type": "product-recommendations",
       "blocks": {
+        "variant_picker_Rf4Gp9": {
+          "type": "variant-picker",
+          "name": "t:names.product_variant_picker",
+          "settings": {
+            "variant_style": "dropdowns",
+            "show_swatches": true,
+            "alignment": "center",
+            "padding-block-start": 0,
+            "padding-block-end": 8,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
         "static-product-card": {
           "type": "_product-card",
           "name": "t:names.product_card",
@@ -182,6 +196,9 @@
           ]
         }
       },
+      "block_order": [
+        "variant_picker_Rf4Gp9"
+      ],
       "name": "t:names.product_recommendations",
       "settings": {
         "product": "bolso-mediano-con-cadena",
