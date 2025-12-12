@@ -928,7 +928,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Facebook</p>",
+                        "text": "<p><a href=\"#\" title=\"#\">Facebook</a></p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -954,7 +954,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Pinterest</p>",
+                        "text": "<p><a href=\"#\" title=\"#\">Pinterest</a></p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -980,7 +980,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Instagram</p>",
+                        "text": "<p><a href=\"#\" title=\"#\">Instagram</a></p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1006,7 +1006,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>TikTok</p>",
+                        "text": "<p><a href=\"#\" title=\"#\">TikTok</a></p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1032,7 +1032,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Spotify</p>",
+                        "text": "<p><a href=\"#\" title=\"#\">Spotify</a></p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
