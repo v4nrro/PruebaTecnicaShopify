@@ -1,12 +1,7 @@
-
-{% liquid
-  assign pressed = false
-%}
-
 <div class="newsletter-wrapper">
   {% render 'newsletter-button', onclick: 'showFormNews(this)' %}
-  
-  <form id="form_newsletter" name="form_newsletter" action="" novalidate="novalidate" class="{% if pressed %}show-form{% else %}hide-form{% endif %}">
+
+  <form id="form_newsletter" name="form_newsletter" action="" novalidate="novalidate" class="">
     <div class="caja-input-news bloque-input">
       <input
         type="email"
