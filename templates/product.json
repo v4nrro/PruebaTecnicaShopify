@@ -223,31 +223,230 @@
               },
               "block_order": []
             },
-            "text_aEtTtq": {
-              "type": "text",
-              "name": "Product description",
+            "accordion_qnitL8": {
+              "type": "accordion",
+              "name": "t:names.accordion",
               "settings": {
-                "text": "{{ closest.product.description }}",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-primary--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
+                "icon": "caret",
+                "dividers": false,
+                "type_preset": "",
+                "inherit_color_scheme": true,
+                "color_scheme": "scheme-cc5a01f5-53de-430a-ba65-2c9f46f6188a",
+                "border": "none",
+                "border_width": 0,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "padding-block-start": 45,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
-              "blocks": {}
+              "blocks": {
+                "accordion_row_WAXCGn": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "DESCRIPCIÓN",
+                    "open_by_default": true,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_fCXWJj": {
+                      "type": "text",
+                      "settings": {
+                        "text": "{{ closest.product.description }}",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "font": "var(--font-body--family)",
+                        "font_size": "0.875rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_fCXWJj"
+                  ]
+                },
+                "accordion_row_iaWTgk": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "COMPOSICIÓN",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_7zBG4w": {
+                      "type": "text",
+                      "settings": {
+                        "text": "{{ closest.product.metafields.shopify[\"color-pattern\"] | metafield_tag: field: 'label' }}",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "font": "var(--font-body--family)",
+                        "font_size": "0.875rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_7zBG4w"
+                  ]
+                },
+                "accordion_row_gmhbiW": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "ENVÍOS",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_7AGzND": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<ul><li>Envío Estándar: 2 días laborables</li><li>Envío Express: 1 día laboral</li></ul><p>Puedes consultar los gastos de envío en la siguiente tabla:<span style=\"text-decoration:underline\">Consúltalo aquí</span>.En cualquier caso, durante el proceso de compra y antes de realizar el pago te detallamos los gastos de envío.Nuestro compromiso con el planeta también está presente en nuestros envíos. Todas las cajas de nuestros pedidos son de cartón 100% reciclado y reutilizable.<em>Unisa</em>❤<em>the planet</em>*Para Canarias, Ceuta y Melilla consulta las opciones de envío</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "font": "var(--font-body--family)",
+                        "font_size": "0.875rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_7AGzND"
+                  ]
+                },
+                "accordion_row_hhR4gi": {
+                  "type": "_accordion-row",
+                  "name": "t:names.accordion_row",
+                  "settings": {
+                    "heading": "DEVOLUCIONES",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_Y9hCHV": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Tranquila/o, si no estás satisfecha/o puedes devolver tus Unisas sin coste alguno (siempre que el producto no esté usado o dañado). El plazo de devolución es de 30 días. (<a href=\"https://www.unisa-europa.com/es-ES/envio-devolucion/\" target=\"_blank\"><span style=\"text-decoration:underline\">Más información</span></a>)<br/><br/>Si quieres devolver recuerda conservar la caja en la que te enviamos tu pedido. Todos nuestros envases son ecológicos y reutilizables.<em>Unisa</em>❤<em>the planet</em>*Para Canarias, Ceuta, Melilla consulta las opciones de devolución.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "font": "var(--font-body--family)",
+                        "font_size": "0.875rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_Y9hCHV"
+                  ]
+                },
+                "accordion_row_47diHx": {
+                  "type": "_accordion-row",
+                  "name": "t:names.accordion_row",
+                  "settings": {
+                    "heading": "¿NECESITAS AYUDA?",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_9wcJcB": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Para cualquier duda puedes consultar nuestras <a href=\"https://www.unisa-europa.com/es-ES/faqs/\"><span style=\"text-decoration:underline\">preguntas frecuentes </span></a>.Si necesitas contactar con nosotros, puedes enviarnos un e-mail a <a href=\"mailto:shoponline@unisa-europa.com\"><span style=\"text-decoration:underline\">shoponline@unisa-europa.com </span></a>o llamarnos gratis al <a href=\"tel:900400440\"><span style=\"text-decoration:underline\">900 400 440</span></a></p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "font": "var(--font-body--family)",
+                        "font_size": "0.875rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_9wcJcB"
+                  ]
+                }
+              },
+              "block_order": [
+                "accordion_row_WAXCGn",
+                "accordion_row_iaWTgk",
+                "accordion_row_gmhbiW",
+                "accordion_row_hhR4gi",
+                "accordion_row_47diHx"
+              ]
             }
           },
           "block_order": [
@@ -255,7 +454,7 @@
             "divider_VJhene",
             "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi",
-            "text_aEtTtq"
+            "accordion_qnitL8"
           ]
         }
       },
