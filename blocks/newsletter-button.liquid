@@ -41,9 +41,10 @@
 function showFormNews(button) {
   const wrapper = button.closest('.newsletter-wrapper');
   const form = wrapper.querySelector('#form_newsletter');
-  
+  const newsletterButton = document.querySelector('.newsletter-button');
+
   // Hide button and show form
-  button.style.display = 'none';
+  newsletterButton.style.display = none;
   form.classList.remove('hide-form');
   form.classList.add('show-form');
 }

@@ -2,6 +2,7 @@
   Intended for use in a block similar to the button block.
 
   @param {object} [block] - The block
+  @param {string} [onclick] - Optional onclick handler
 
   {% render 'button' %}
 {%- enddoc -%}
@@ -13,8 +14,12 @@
     size-style
     {{ block_settings.style_class }}
     {{ block_settings.style_class }}--{{ block.id }}
+    newsletter-button
   "
   style="{% render 'size-style', settings: block_settings %}"
+  {% if onclick %}
+    onclick="{{ onclick }}" 
+  {% endif %}
   {{ block.shopify_attributes }}
 >
   {{ block_settings.label }}
