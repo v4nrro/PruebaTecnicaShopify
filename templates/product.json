@@ -229,7 +229,7 @@
               "settings": {
                 "icon": "caret",
                 "dividers": false,
-                "type_preset": "",
+                "type_preset": "h4",
                 "inherit_color_scheme": true,
                 "color_scheme": "scheme-cc5a01f5-53de-430a-ba65-2c9f46f6188a",
                 "border": "none",
