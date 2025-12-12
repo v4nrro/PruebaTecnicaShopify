@@ -95,6 +95,11 @@
         "type": "shopify://apps/instafeed/blocks/head-block/c447db20-095d-4a10-9725-b5977662c9d5",
         "disabled": false,
         "settings": {}
+      },
+      "9996702593771467882": {
+        "type": "shopify://apps/breadcrumbs-categories/blocks/app-embed/0199ba93-f2af-7694-9e98-6ee83ae7b093",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
