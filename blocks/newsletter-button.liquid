@@ -1,10 +1,10 @@
-{% render 'newsletter-button', onclick: 'showFormNews(this)' %}
 
 {% liquid
   assign pressed = false
 %}
 
 <div class="newsletter-wrapper">
+  {% render 'newsletter-button', onclick: 'showFormNews(this)' %}
   <form id="form_newsletter" name="form_newsletter" action="" novalidate="novalidate" class="{% if pressed %}show-form{% else %}hide-form{% endif %}">
     <div class="caja-input-news bloque-input">
       <input
@@ -44,7 +44,7 @@ function showFormNews(button) {
   const newsletterButton = document.querySelector('.newsletter-button');
 
   // Hide button and show form
-  newsletterButton.style.display = none;
+  newsletterButton.style.display = 'none';
   form.classList.remove('hide-form');
   form.classList.add('show-form');
 }
