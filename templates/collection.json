@@ -16,7 +16,7 @@
           "type": "text",
           "name": "Description",
           "settings": {
-            "text": "<p>Todos los zapatos de Unisa. Unisa online</p>",
+            "text": "<p>Artículos de Unisa. Unisa online</p>",
             "width": "100%",
             "max_width": "none",
             "alignment": "left",
